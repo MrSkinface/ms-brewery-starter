@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          - name: Create maven settings
-          - command: echo $MVN_SETTINGS > .circleci/.settings.xml
+          name: Create maven settings
+          command: echo $MVN_SETTINGS > .circleci/.settings.xml
       - run:
           name: Build and deploy
           command: mvn -s .circleci/.settings.xml clean deploy
