@@ -10,9 +10,10 @@
     </parent>
     <groupId>ua.mike</groupId>
     <artifactId>ms-brewery-starter</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>ms-brewery-starter</name>
     <description>Parent pom with common properties/dependencies/plugins</description>
+    <packaging>pom</packaging>
 
     <organization>
         <name>Mike's microservices</name>
@@ -41,14 +42,14 @@
         </repository>
         <repository>
             <id>brewery-starter</id>
-            <url>https://maven.pkg.github.com/mikes-microservices/brewery-starter</url>
+            <url>https://maven.pkg.github.com/MrSkinface/ms-brewery-starter</url>
         </repository>
     </repositories>
 
     <distributionManagement>
         <repository>
             <id>brewery-starter</id>
-            <url>https://maven.pkg.github.com/mikes-microservices/brewery-starter</url>
+            <url>https://maven.pkg.github.com/MrSkinface/ms-brewery-starter</url>
         </repository>
     </distributionManagement>
 
