@@ -58,6 +58,10 @@
             <id>brewery-starter</id>
             <url>https://maven.pkg.github.com/MrSkinface/ms-brewery-starter</url>
         </repository>
+        <repository>
+            <id>jms-commons</id>
+            <url>https://maven.pkg.github.com/MrSkinface/ms-common-jms</url>
+        </repository>
     </repositories>
 
     <distributionManagement>
