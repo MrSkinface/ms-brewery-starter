@@ -10,7 +10,7 @@
     </parent>
     <groupId>ua.mike</groupId>
     <artifactId>ms-brewery-starter</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <name>ms-brewery-starter</name>
     <description>Parent pom with common properties/dependencies/plugins</description>
     <packaging>pom</packaging>
@@ -30,7 +30,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <jaxb.version>2.3.0</jaxb.version>
+        <jaxb.version>2.3.1</jaxb.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
@@ -41,7 +41,8 @@
         <awaitility.version>4.0.3</awaitility.version>
         <spock.version>1.3-groovy-2.5</spock.version>
         <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
-        <spring-cloud.version>2020.0.1</spring-cloud.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <netflix.eureka.version>3.1.3</netflix.eureka.version>
         <h2.version>2.1.212</h2.version>
         <mysql-connector.version>8.0.29</mysql-connector.version>
         <state.machine.version>3.2.0</state.machine.version>
@@ -82,8 +83,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${netflix.eureka.version}</version>
             </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
@@ -160,6 +164,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
