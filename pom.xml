@@ -10,7 +10,7 @@
     </parent>
     <groupId>ua.mike</groupId>
     <artifactId>ms-brewery-starter</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8</version>
     <name>ms-brewery-starter</name>
     <description>Parent pom with common properties/dependencies/plugins</description>
     <packaging>pom</packaging>
@@ -49,6 +49,7 @@
         <state.machine.version>3.2.0</state.machine.version>
         <jedis.version>3.7.0</jedis.version>
         <ms.common.jms.version>0.0.1</ms.common.jms.version>
+        <cloud.openfeign.starter.version>3.1.3</cloud.openfeign.starter.version>
     </properties>
 
     <repositories>
@@ -75,6 +76,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${cloud.openfeign.starter.version}</version>
+            </dependency>
             <dependency>
                 <groupId>ua.mike.micro</groupId>
                 <artifactId>ms-common-jms</artifactId>
